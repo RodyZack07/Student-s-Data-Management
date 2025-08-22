@@ -57,12 +57,6 @@ export default function SideBar({selectedKey = '1', onNavigate}:  SideBarProps) 
             style={ {marginTop: 50 }}
 
        />
-
-
-
         </Sider>
-
-
-
     )
 }
