@@ -1,0 +1,60 @@
+/* src/App.css */
+
+:root {
+  --brown: #8B5E3C; /* warna coklat, ganti kalau mau */
+  --text-on-brown: #ffffff;
+  --height-nav: 64px;
+}
+
+/* Reset sedikit */
+* { box-sizing: border-box; }
+
+/* Top navbar */
+.top-nav {
+  background: var(--brown);
+  color: var(--text-on-brown);
+  height: var(--height-nav);
+  display: flex;
+  align-items: center;      /* center vertikal */
+  justify-content: center;  /* center horizontal */
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+
+/* inner container agar logo + title tetap rapi dan tidak melebar penuh */
+.top-nav__inner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center; /* center konten di area inner */
+}
+
+/* logo kotak kecil di kiri title */
+.top-nav__logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-on-brown);
+  margin-right: 8px;
+}
+
+/* judul utama */
+.top-nav__title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+/* responsive: untuk layar kecil, tidak perlu banyak perubahan */
+@media (max-width: 640px) {
+  .top-nav__title { font-size: 16px; }
+  .top-nav__inner { padding: 0 12px; }
+}
